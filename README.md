@@ -2,18 +2,18 @@
 A simple set of scripts that apply fixes to Fable 3, allowing you to play the game at a stable 60 FPS. 
 
 # What does it do?
-The Fable 3 PC port is infamously poor quality. Even today on a RTX 2080 I coudln't get a stable 60 FPS without a lot of stuttering. Well you don't need to worry anymore, this script fixes these issues.
+The Fable 3 PC port is infamously poor quality. Even today on a RTX 2080 I couldn't get a stable 60 FPS without a lot of stuttering, this script fixes the issues that cause this to be a buggy mess.
 
 The main script, applies 2 fixes specifically:
-1. Forces the game to use Vulkan, instead of DirectX9. This allows for more stable frame rates, even on Windows for Fable.
-2. Installs a Games For Windows Live bypass. This allows us to connect to the game without having to deal with the plethora of issues that comes with getting GFWL to work.
+1. Forces the game to use Vulkan, instead of DirectX9. This allows for more stable frame rates, even on Windows. (For Fable 3 specifically)
+2. Installs a Games For Windows Live Bypass. This allows us to connect to the game without having to deal with the plethora of issues that comes with getting GFWL to work.
 
 I have also created 2 extra scripts, which you can find in the folder of the same name. 
 
-These scripts are: resolution_fixer.sh and voice_fixer.sh
+These scripts are: **resolution_fixer.sh** and **voice_fixer.sh**
 
-* resolution_fixer.sh - Fixes issues with setting resolutions in game, but can also be used to force the game to render resolutions that aren't natively supported. This allows the game to be more acessible to ultra-wide monitor users.
-* voice_fixer.sh - Fixes an issue in which NPCs voice lines will not play, even though the mouth is moving as if they are speaking.
+* **resolution_fixer.sh** - Fixes issues with setting resolutions in game, but can also be used to force the game to render resolutions that aren't natively supported. This allows the game to be more acessible to ultra-wide monitor users.
+* **voice_fixer.sh** - Fixes an issue in which NPCs voice lines will not play, even though the mouth is moving as if they are speaking.
 
 These two scripts won't need to be used by some users, however some users will find these fixes vital to playing their game in an enjoyable manor.
 
@@ -43,7 +43,7 @@ The links to both of these files will be below, along with a VirusTotal scan for
 * DXVK GitHub Page: https://github.com/doitsujin/dxvk
 * DXVK VirusTotal Scan: https://www.virustotal.com/gui/file/8d1a3c912761b450c879f98478ae64f6f6639e40ce6848170a0f6b8596fd53c6
 
-* GFWL Disabler DropBox: https://www.dropbox.com/sh/l1yugur7zvzvwvz/AACeYxOtOf1GA0kJImPs3s44a?dl=0
+* GFWL Disabler DropBox: https://www.dropbox.com/sh/l1yugur7zvzvwvz/AACeYxOtOf1GA0kJImPs3s44a?dl=0 [Link to external website]
 * GFWL Disabler VirusTotal Scan: https://www.virustotal.com/gui/file/62a3bf6263e121d1d142c922dd242bbaeffc647a97bff4b9246ab26d7d41a78b
 
 # Need Help or have a bug to report?
