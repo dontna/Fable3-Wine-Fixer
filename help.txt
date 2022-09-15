@@ -102,11 +102,16 @@ This documentation will help you to get the best usage out of this script. If yo
 		2. CD into the 'ExtraScripts' folder
 		3. Run the 'resolution_fixer.sh' script, with the path to the bottle as an argument; followed by the Width and Height of your screen. 
 	
-	It should look like this: ./resolution_fixer.sh [PATH_TO_WINEBOTTLE] [WIDTH] [HEIGHT]
+	It should look like this: ./resolution_fixer.sh [PATH_TO_WINEBOTTLE] [WIDTH] [HEIGHT] <optional_flags>
 
 	A practical example would look like this: ./resolution_fixer.sh /home/dontna/fable3bottle/ 3440 1440
 
-	Which would set the game resolution to 3440x1440. 
+	Which would set the game resolution to 3440x1440.
+
+	Another example would look like this: ./resolution_fixer.sh /home/dontna/fable3bottle/ 3440 1440 --noreadonly
+
+	This would also set the game resolution to 3440x1440, but the '--noreadonly' flag would tell the script NOT to make the modified file read-only after. 
+	This is optional, but I recommend you don't use this flag; but ultimately its up to you.
 
 	The script will also set the file which it changes to read only by default, if you DO NOT want this please add the '--noreadonly' flag. 
 	Also please note even though the file is set to read-only mode; any changes to settings in game WILL reset it for that session. 
