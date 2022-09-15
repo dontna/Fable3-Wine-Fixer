@@ -55,14 +55,14 @@ This documentation will help you to get the best usage out of this script. If yo
 
 			If done correctly this will return a full path to this folder, you will need to specify this path in the script arguments so feel free to copy it.
 
-
-	You also need to instal
 	Now you've done those steps, you're ready to run the script.
 
 
-=== RUNNING THE SCRIPT ===
-	In a new terminal window, run the script specifying the path to your bottle first; followed by your games directory. 
+=== RUNNING THE SCRIPT ===	
+	In a new terminal window, run the script specifying the path to your bottle first; followed by your games directory.
 	It should look something like this: ./fable3_fixer.sh "[PATH_TO_WINEBOTTLE]" "[PATH_TO_GAME_DIRECTORY]"
+	
+	Note: You may have to make the script executable. To do this simply type: chmod +x fable3_fixer.sh
 
 	Where it says anything in [brackets] replace that with your actual path to your folders. Also please enclose your path with quotation marks to ensure no problems pop up.
 	A realistic example would look like: ./fable3_fixer.sh "/home/dontna/fable3bottle/" "/home/peter/.steam/steamapps/common/Fable 3/"
@@ -91,6 +91,8 @@ This documentation will help you to get the best usage out of this script. If yo
 		Alternitively, if you don't want to run a script. You can simply type: WINEPREFIX=[PATH_TO_WINEBOTTLE] winetricks --force xact
 
 		This is what the script runs for you, so feel free to use whichever method is easier; you will be getting the fix regardless.
+
+		Note: You may have to install winetricks if you have not already. Find out how here: https://github.com/Winetricks/winetricks
 
 
 === RESOLUTION FIX ===
