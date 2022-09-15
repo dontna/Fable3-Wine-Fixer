@@ -1,0 +1,126 @@
+This documentation will help you to get the best usage out of this script. If you're confident you understand how it works, you need not follow this set of instructions; however help will not be offered if the question is covered in this documentation.
+
+=== BEFORE WE START ===
+	This script downloads a few differnet things to ensure your Fable 3 experience is flawless. I will now list the things the script downloads, DO NOT run this script if you do not trust any of the sources below.
+
+	1. DXVK - Used to make our game run with Vulkan, which fixes A LOT of the stuttering problems and allows for a more flawless gameplay experience. Without it performance is aweful.
+		Link: https://github.com/doitsujin/dxvk/releases/tag/v1.10.3
+	
+	2. GFWL (Games for Windows Live) Disabler - This disables Games for Windows Live completely allowing us to play without creating / having a GFWL Account. Needed since GFWL is no longer supported.
+		Link: https://www.dropbox.com/sh/l1yugur7zvzvwvz/AACeYxOtOf1GA0kJImPs3s44a?dl=0
+
+	
+	These are the exact links I used to play Fable 3, if you do believe either myself or the links of malice; DO NOT use this script.
+
+
+=== NEED HELP / REPORTING BUGS ===
+	If you need any help or run into any issues, please feel free to reach out via github here: https://github.com/dontna
+	Please be advised, if something you need help with is already covered in this document; no help will be offered so please follow along if you are not confident with Wine.
+
+
+=== BEFORE RUNNING THE SCRIPT ===
+	Before running the script you need to create a directory which will contain your Wine Prefix. The script will get Wine to automatically create the Prefix, so all you need to do is create a directory and know its path. You will also need to know the path to the games directory.
+
+		>> CREATING A DIRECTORY <<
+		You can do that simply by:
+
+			1. Go to where you want the Prefix to be located (this will stay here, so make sure its in a good place)
+			2. Open a terminal and type: makedir {dir_name}
+
+			Note: Instead of '{dir_name}' you should type whatever name you want your bottle to have. A paractical example would be: makedir fable3bottle 
+
+			
+			This will create the folder, and to get the path simply:	
+			
+			1. Change directory into the folder you created: cd {dir_name}
+			2. In the same terminal type: pwd
+
+			If done correctly this will return a full path to this folder, you will need to specify this path in the script arguments so feel free to copy it.
+
+		>> FINDING GAMES DIRECTORY <<
+		In Steam it is simple:
+
+			1. Open Steam
+			2. Find your game in your Library
+			3. Right Click and press 'Properties'
+			4. In the new window, click on 'LOCAL FILES'
+			5. In the top right of the new window, you will see a botton called 'Browse...' simply click on it.
+			6. A new window should open, and your path should be right at the top in a little bar.
+			
+			If it isn't there then you can try:
+			
+			1. Right clicking in the game directory
+			2. Click on the option which says: 'Terminal', 'Open Terminal Here' or something of that nature.
+			3. In the new terminal, type: pwd
+
+			If done correctly this will return a full path to this folder, you will need to specify this path in the script arguments so feel free to copy it.
+
+
+	You also need to instal
+	Now you've done those steps, you're ready to run the script.
+
+
+=== RUNNING THE SCRIPT ===
+	In a new terminal window, run the script specifying the path to your bottle first; followed by your games directory. 
+	It should look something like this: ./fable3_fixer.sh "[PATH_TO_WINEBOTTLE]" "[PATH_TO_GAME_DIRECTORY]"
+
+	Where it says anything in [brackets] replace that with your actual path to your folders. Also please enclose your path with quotation marks to ensure no problems pop up.
+	A realistic example would look like: ./fable3_fixer.sh "/home/dontna/fable3bottle/" "/home/peter/.steam/steamapps/common/Fable 3/"
+
+	If everything is done correctly, the script will: configure, fix and run Fable 3.
+
+	Note: If anything has gone wrong, please try putting quotation marks sorrounding your
+	
+	Once the game has been run, please play the game for a few minutes to check:
+
+		1. If the voices are working correctly. (Look at characters mouths, if there is no audio; goto the 'VOICES FIX' section and follow instructions)
+		2. If your resolution is what it should be. (Fable 3 can support higher resolutions than shown in game. 
+			For example, if you're playing on a 3440x1440 monitor, your resolution is supported check the 'RESOLUTION FIX' section.
+
+	If no problems are in sight, you are ready to play and should be able to play without problems.
+	Note: There are some things you may not be able to do, please check  the 'UNFIXED PROBLEMS' section to find out more.
+
+
+=== VOICES FIX ===
+	If you're having the issue where voices aren't playing despite the mouth moving, I have a simple script to fix it. Kindly follow the following steps to use the script.
+
+		1. Navigate to the folder containing my script.
+		2. CD into the 'ExtraScripts' folder
+		3. Run the 'voice_fixer.sh' script, with the path to the bottle as an argument. It should look like this: ./voice_fixer.sh [PATH_TO_WINEBOTTLE]
+		
+		Alternitively, if you don't want to run a script. You can simply type: WINEPREFIX=[PATH_TO_WINEBOTTLE] winetricks --force xact
+
+		This is what the script runs for you, so feel free to use whichever method is easier; you will be getting the fix regardless.
+
+
+=== RESOLUTION FIX ===
+	If the game is stretching the game to fit it on your screen, or the game isn't recogising your screen properly; I have made a script which will fix it for you.
+
+		1. Navigate to the folder containing my script.
+		2. CD into the 'ExtraScripts' folder
+		3. Run the 'resolution_fixer.sh' script, with the path to the bottle as an argument; followed by the Width and Height of your screen. 
+	
+	It should look like this: ./resolution_fixer.sh [PATH_TO_WINEBOTTLE] [WIDTH] [HEIGHT]
+
+	A practical example would look like this: ./resolution_fixer.sh /home/dontna/fable3bottle/ 3440 1440
+
+	Which would set the game resolution to 3440x1440. 
+
+	The script will also set the file which it changes to read only by default, if you DO NOT want this please add the '--noreadonly' flag. 
+	Also please note even though the file is set to read-only mode; any changes to settings in game WILL reset it for that session. 
+	However after rebooting the game and coming back, the screen resolution set by this script will be set.
+
+	Note: This WILL NOT show up in the game settings, and any adjustments of the settings WILL reset the resolution. I reccommend to set all of your settings first, and run this fix last.
+
+
+=== UNFIXED PROBLEMS ===
+	There is one specific problem that happens randomly, you may not be able to save your settings. This is an issue with the PC port and is no fault of my script. 
+
+	EVERYONE should be able to save the following settings:
+
+		- Screen Resolution
+		- VSync
+
+	Any other settings are hit and miss. If you want to change them, feel free to try however there is no guarantee that they will stick after restarting the game.
+
+	I am still looking into this issue, and if anything changes I will update the script and the GitHub page, however so far I have found no fix.
