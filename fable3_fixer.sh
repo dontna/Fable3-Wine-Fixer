@@ -34,7 +34,7 @@ WINEARCH=win32 WINEPREFIX="$PREFIX_PATH" winepath
 
 # Download Vulkan
 mkdir $(pwd)/Downloads/
-cd Downloads/
+cd $(pwd)/Downloads/
 wget https://github.com/doitsujin/dxvk/releases/download/v1.10.3/dxvk-1.10.3.tar.gz -O $(pwd)/dxvk-1.10.3.tar.gz
 tar -xvzf dxvk-1.10.3.tar.gz
 rm "dxvk-1.10.3.tar.gz"
