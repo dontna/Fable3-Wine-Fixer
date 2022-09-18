@@ -16,13 +16,18 @@ fi
 if [[ -z "$1" || -z "$2" || -z "$3" ]]; then
 	echo "Not enough arguments passed."
 	echo "Use '-h' for help"
-	exit 0
+	exit 1
 fi
 
 if ! [[ $(ls "$1" -1 | grep drive_c) ]]; then
 	echo "Cannot find \"drive_c\" in \"$1\""
 	echo "Are you sure this is your prefix?"
-	exit 0
+	exit 1
+fi
+
+if [[ ${#1} -gt 4 || ${#2} -gt 4 ]]; then
+	echo "The resolution '$1x$2', doesn't seem right. Please fix errors and try again."
+	exit 1
 fi
 
 if [[ "$4" == "-n" || "$4" == "--noreadonly" ]]; then
