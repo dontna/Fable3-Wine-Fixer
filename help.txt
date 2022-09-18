@@ -65,7 +65,7 @@ This documentation will help you to get the best usage out of this script. If yo
 	Note: You may have to make the script executable. To do this simply type: chmod +x fable3_fixer.sh
 
 	Where it says anything in [brackets] replace that with your actual path to your folders. Also please enclose your path with quotation marks to ensure no problems pop up.
-	A realistic example would look like: ./fable3_fixer.sh "/home/dontna/fable3bottle/" "/home/peter/.steam/steamapps/common/Fable 3/"
+	A realistic example would look like: ./fable3_fixer.sh "/home/dontna/fable3bottle/" "/home/dontna/.local/share/Steam/steamapps/common/Fable 3/"
 
 	If everything is done correctly, the script will: configure, fix and run Fable 3.
 
