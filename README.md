@@ -49,7 +49,7 @@ The links to both of these files will be below, along with a VirusTotal scan for
 # Need Help or have a bug to report?
 If you need help, and you cannot find the solution in the 'help.txt' document, feel free to message me and I will be happy to help! Same goes for any bug reports.
 
-# Fork You?
-If you want to ;)
+# Forking My Projects?
 
-But honestly, please feel free to Fork this project or just add to it here. Feel free to change, add or remove anything you want. You don't have to credit me either, but I would appreciate it.
+All of my projects you can fork and utilise the code however you want. You don't need to give me credit, but can do if you would like.
+
