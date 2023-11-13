@@ -21,13 +21,11 @@ These two scripts won't need to be used by some users, however some users will f
 The script is really simple, however you do need to a little setup beforehand.
 
 1. Create a new folder, which will be the games Wine Prefix. Even if you have a prefix already, use this as your prefix.
-* `mkdir my_new_bottle`
-2. Find your path to the Fable 3 game directory. The easiest way to do this is to do the following steps. The path will usually be at the top in a little bar.
-* `Open Steam > Library > Fable 3 > Right Click > Local Files > 'Browse...' `
-3. Run the script with the path to the prefix we made earlier, followed by your game directory path.
-* Example: `./fable3_fixer.sh "/home/dontna/my_new_bottle/" "/home/dontna/.steam/steam/steamapps/common/Fable 3/"`
+* `mkdir /home/dontna/my_new_bottle`
+2. Run the script with the path to the prefix we made earlier.
+* Example: `./fable3_fixer.sh "/home/dontna/my_new_bottle/"`
 
-If done correctly the script will apply all the necessary fixes.
+If done correctly the script will apply all the necessary fixes, and automatically create a Wine bottle for the game.
 
 To see how the other scripts work, or for a more detailed tutorial for the main one, please refer to the 'help.txt' document.
 

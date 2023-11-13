@@ -24,48 +24,25 @@ This documentation will help you to get the best usage out of this script. If yo
 		>> CREATING A DIRECTORY <<
 		You can do that simply by:
 
-			1. Go to where you want the Prefix to be located (this will stay here, so make sure its in a good place)
-			2. Open a terminal and type: makedir {dir_name}
+			1. Open a terminal and type: makedir /home/{username}/{dir_name}
 
-			Note: Instead of '{dir_name}' you should type whatever name you want your bottle to have. A paractical example would be: makedir fable3bottle 
+			This would create a bottle in the home of your user, it doesn't have to be here it can be put anywhere you have access to.
 
-			
-			This will create the folder, and to get the path simply:	
-			
-			1. Change directory into the folder you created: cd {dir_name}
-			2. In the same terminal type: pwd
+			Note: Instead of '{dir_name}' you should type whatever name you want your bottle to have. A paractical example would be: makedir /home/dontna/fable3bottle 
 
-			If done correctly this will return a full path to this folder, you will need to specify this path in the script arguments so feel free to copy it.
+			Remember the path to this folder, because the script will need you to provide it.
 
-		>> FINDING GAMES DIRECTORY <<
-		In Steam it is simple:
-
-			1. Open Steam
-			2. Find your game in your Library
-			3. Right Click and press 'Properties'
-			4. In the new window, click on 'LOCAL FILES'
-			5. In the top right of the new window, you will see a botton called 'Browse...' simply click on it.
-			6. A new window should open, and your path should be right at the top in a little bar.
-			
-			If it isn't there then you can try:
-			
-			1. Right clicking in the game directory
-			2. Click on the option which says: 'Terminal', 'Open Terminal Here' or something of that nature.
-			3. In the new terminal, type: pwd
-
-			If done correctly this will return a full path to this folder, you will need to specify this path in the script arguments so feel free to copy it.
-
-	Now you've done those steps, you're ready to run the script.
+	Now you've done this step, you're ready to run the script.
 
 
 === RUNNING THE SCRIPT ===	
-	In a new terminal window, run the script specifying the path to your bottle first; followed by your games directory.
-	It should look something like this: ./fable3_fixer.sh "[PATH_TO_WINEBOTTLE]" "[PATH_TO_GAME_DIRECTORY]"
+	In a new terminal window, run the script specifying the path to your bottle.
+	It should look something like this: ./fable3_fixer.sh "[PATH_TO_WINEBOTTLE]"
 	
-	Note: You may have to make the script executable. To do this simply type: chmod +x fable3_fixer.sh
+	Note: You may have to make the script executable. To do this simply type: chmod u+x fable3_fixer.sh
 
-	Where it says anything in [brackets] replace that with your actual path to your folders. Also please enclose your path with quotation marks to ensure no problems pop up.
-	A realistic example would look like: ./fable3_fixer.sh "/home/dontna/fable3bottle/" "/home/dontna/.local/share/Steam/steamapps/common/Fable 3/"
+	Where it says anything in [brackets] replace that with your actual path to your folders. Also please enclose your path with quotation marks if you have spaces to ensure no problems pop up.
+	A realistic example would look like: ./fable3_fixer.sh /home/dontna/fable3bottle/
 
 	If everything is done correctly, the script will: configure, fix and run Fable 3.
 
